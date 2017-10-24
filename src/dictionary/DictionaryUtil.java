@@ -15,9 +15,8 @@ public class DictionaryUtil {
 
     private RWayTrieMap buildTrie() throws IOException {
         RWayTrieMap trieMap = new RWayTrieMap();
-        File file = new File("src/dictionary/dictionary.txt"); //10000 most common English words
-        FileReader fr = new FileReader(file);
-        BufferedReader bf = new BufferedReader(fr);
+        InputStream input = getClass().getResourceAsStream("/dictionary/dictionary.txt");
+        BufferedReader bf = new BufferedReader(new InputStreamReader(input, "UTF-8"));
         String word;
 
         while((word = bf.readLine()) != null){

@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         List<String> phrases = readSearch(args);
-      //  List<String> phrases = Arrays.asList("hola mundo","mundo","hola" );
+      //  List<String> phrases = Arrays.asList("hello","world","hello world" );
         WordDetectionAutomaton nonDet = new WordDetectionAutomaton(phrases);
         WordDetectionAutomaton deterministic = nonDet.createDeterministic();
 
